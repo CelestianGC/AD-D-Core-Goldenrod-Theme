@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+        <!-- Characters -->
+        <framedef name="charsheet">
+            <bitmap file="graphics/frames/adnd_charsheet.png" />
+            <offset>50,50,45,45</offset>
+            <insideoffset>0,0,0,0</insideoffset>
+        </framedef>
+        <!-- Characters -->
+        <framedef name="acicon">
+            <bitmap file="graphics/frames/adnd_acshield.png" />
+            <topleft rect="0,0,35,39" />
+        </framedef>
+        <framedef name="adnd_hpicon">
+            <bitmap file="graphics/frames/adnd_hpbox.png" />
+            <topleft rect="0,0,50,30" />
+        </framedef>
+        <framedef name="adnd_hpothericon">
+            <bitmap file="graphics/frames/adnd_hpbox_other.png" />
+            <topleft rect="0,0,50,30" />
+        </framedef>
+        <framedef name="adnd_moveicon">
+            <bitmap file="graphics/frames/adnd_move.png" />
+            <topleft rect="0,0,50,36" />
+        </framedef>
+        <framedef name="adnd_saveicon">
+            <bitmap file="graphics/frames/adnd_savescore.png" />
+            <topleft rect="0,0,25,25" />
+        </framedef>
+        <framedef name="adnd_combaticon">
+            <bitmap file="graphics/frames/adnd_combatheader.png" />
+            <topleft rect="0,0,300,24" />
+        </framedef>
+	
+        <framedef name="sheetgroup">
+            <bitmap file="graphics/frames/sheetgroup.png" />
+            <offset>18,18,17,17</offset>
+        </framedef>
+
+        <framedef name="abilityfields">
+            <bitmap file="graphics/frames/abilityscore_dark.png" />
+            <offset>7,7,7,7</offset>
+        </framedef>
+
+        <framedef name="abilityscore_box">
+            <bitmap file="graphics/frames/groupbox.png" />
+            <offset>9,9,9,9</offset>
+        </framedef>
+        
+        <framedef name="shaded_box">
+            <bitmap file="graphics/frames/rowshade.png" />
+            <offset>9,9,9,9</offset>
+        </framedef>
+
+        <framedef name="bonus_box">
+            <bitmap file="graphics/frames/bonus.png" />
+            <offset>9,9,9,9</offset>
+        </framedef>
+
+        <framedef name="adnd_square">
+            <bitmap file="graphics/frames/adnd_squarebox.png" />
+            <offset>9,9,9,9</offset>
+        </framedef>
+
+        <framedef name="adnd_rectangle">
+            <bitmap file="graphics/frames/adnd_rectangle.png" />
+            <offset>9,9,9,9</offset>
+        </framedef>
+
+        <framedef name="adnd_swordicon">
+            <bitmap file="graphics/frames/adnd_sword.png" />
+            <topleft rect="0,0,207,24" />
+        </framedef>
+</root>

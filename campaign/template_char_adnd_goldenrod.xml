@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+	<template name="number_charabilityscore2">
+		<basicnumber>
+			<frame name="adnd_square" />
+ 			<anchored to="statstitle" position="insidetopleft"/> 
+			<rollable />
+            <readonly />
+            <min>1</min>
+            <max>25</max>
+			<default>9</default>
+			<font>arial-bold-12</font>
+			<script file="campaign/scripts/number_abilityscore.lua" />
+		</basicnumber>
+	</template>
+	<template name="number_abilityfield">
+			<number>
+   				<frame name="adnd_rectangle" />
+				<anchored position="right" offset="0,0" width="40"/>
+                <displaysign />
+   				<center />
+                <nokeyedit />
+				<font>regular8</font>
+			</number>
+	</template>
+	<template name="number_abilityfield_noplus">
+			<number>
+				<frame name="adnd_rectangle" />
+				<anchored position="right" offset="0,0" width="40"/>
+   				<center />
+                <nokeyedit />
+				<font>regular8</font>
+			</number>
+	</template>
+	<template name="percentile_abilityfield">
+			<number>
+                <readonly />
+				<frame name="adnd_rectangle" />
+				<anchored position="right" offset="0,0" width="30" height="25" />
+   				<center />
+				<font>regular8</font>
+                <min> 0 </min>
+                <max> 100 </max>
+			</number>
+	</template>
+	
+	<template name="string_abilityfield">
+			<stringfield>
+				<frame name="adnd_rectangle" />
+				<anchored position="right" offset="0,0" width="40" />
+   				<center />
+                <readonly />
+				<font>regular8</font>
+			</stringfield>
+	</template>
+	
+	<template name="ability_fields_container">
+			<frame_char>
+				<anchored position="right" offset="0,0" width="280"/>
+                <frame name="adnd_rectangle"/>
+			</frame_char>			
+	</template>
+    
+	<template name="number_char_save_charsheet">
+        <number_char_save>
+				<frame name="adnd_saveicon" offset="0,0,0,0" />
+        </number_char_save>
+    </template>
+    <template name="number_charinit_charsheet">
+		<number_charinit>
+            <frame name="adnd_square"/>
+		</number_charinit>
+    </template>
+    
+    <template name="number_charthaco_charsheet">
+        <number_charthaco>
+            <frame name="adnd_square"/>
+        </number_charthaco>
+    </template>
+
+    <template name="surprise_number_total_charsheet">
+        <surprise_number_total>
+            <frame name="adnd_square"/>
+        </surprise_number_total>
+    </template>            
+
+	<template name="number_charspeed_defaults_charsheet">
+        <number_charspeed_defaults>
+            <frame name="adnd_moveicon" offset="12,-2,0,0" />
+        </number_charspeed_defaults>
+	</template>
+	<template name="number_charwounds_charsheet">
+        <number_charwounds>
+            <frame name="adnd_hpothericon" offset="5,1,1,1" />
+        </number_charwounds>
+	</template>
+	<template name="number_hptotal_charsheet">
+        <number_dropadd>
+			<frame name="adnd_hpicon" offset="5,1,1,1" />
+        </number_dropadd>
+	</template>
+	<template name="number_hptemp_charsheet">
+        <number_hptemp>
+			<frame name="adnd_hpothericon" offset="5,1,1,1" />
+        </number_hptemp>
+	</template>
+
+</root>
