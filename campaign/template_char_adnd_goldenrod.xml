@@ -40,13 +40,13 @@
 	</template>
 	<template name="percentile_abilityfield">
 			<number>
-                <readonly />
+        <readonly />
 				<frame name="adnd_rectangle" />
 				<anchored position="right" offset="0,0" width="30" height="25" />
-   				<center />
+        <center />
 				<font>regular8</font>
-                <min> 0 </min>
-                <max> 100 </max>
+        <min> 0 </min>
+        <max> 100 </max>
 			</number>
 	</template>
 	
@@ -55,7 +55,7 @@
 				<frame name="adnd_rectangle" />
 				<anchored position="right" offset="0,0" width="40" />
    				<center />
-                <readonly />
+          <readonly />
 				<font>regular8</font>
 			</stringfield>
 	</template>
@@ -63,7 +63,7 @@
 	<template name="ability_fields_container">
 			<frame_char>
 				<anchored position="right" offset="0,0" width="280"/>
-                <frame name="adnd_rectangle"/>
+          <frame name="adnd_rectangle"/>
 			</frame_char>			
 	</template>
     
@@ -72,12 +72,34 @@
 				<frame name="adnd_saveicon" offset="0,0,0,0" />
         </number_char_save>
     </template>
-    <template name="number_charinit_charsheet">
-		<number_charinit>
-            <frame name="adnd_square"/>
-		</number_charinit>
-    </template>
-    
+
+  <template name="number_charinit_charsheet">
+    <number_chartotal>
+      <font>reference-b-large</font>
+      <frame name="adnd_square"/>
+      <rollable />
+      <displaysign />
+      <modifiersize>mini</modifiersize>
+      <modifierfield>initiative.temporary</modifierfield>
+      <source><name>initiative.misc</name><op>+</op></source>
+      <script>
+        function action(draginfo)
+          local rActor = ActorManager.getActor("pc", window.getDatabaseNode());
+          ActionInit.performRoll(draginfo, rActor);
+
+          return true;
+        end
+        
+        function onDragStart(button, x, y, draginfo)
+          return action(draginfo);
+        end
+          
+        function onDoubleClick(x,y)
+          return action();
+        end
+      </script>
+    </number_chartotal>
+  </template>    
     <template name="number_charthaco_charsheet">
         <number_charthaco>
             <frame name="adnd_square"/>
@@ -91,10 +113,15 @@
     </template>            
 
 	<template name="number_charspeed_defaults_charsheet">
-        <number_charspeed_defaults>
-            <frame name="adnd_moveicon" offset="12,-2,0,0" />
-        </number_charspeed_defaults>
+    <number_charspeed_defaults>
+      <frame name="adnd_moveicon" offset="12,-2,0,0" />
+      <anchored to="combatanchor" width="30" height="30">
+        <top parent="combatanchor" offset="4" />
+        <left anchor="right" relation="relative" offset="20" />
+      </anchored>    
+    </number_charspeed_defaults>
 	</template>
+  
 	<template name="number_charwounds_charsheet">
         <number_charwounds>
             <frame name="adnd_hpothericon" offset="5,1,1,1" />

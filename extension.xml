@@ -4,7 +4,7 @@
 
 	<properties>
 		<name>AD&#38;D Core - Goldenrod Charactersheet Theme</name>
-		<version>1.1</version>
+		<version>1.2</version>
 		<loadorder>99</loadorder>
 		<description>
 			<text>Goldenrod character sheet theme for AD&#38;D Core ruleset.</text>
@@ -12,11 +12,14 @@
 			<author>Celestian</author>
 		</description>
 		<ruleset>
-            <name>AD&#38;D Core</name>
+      <name>AD&#38;D Core</name>
+		</ruleset>
+		<ruleset>
+      <name>2E</name>
 		</ruleset>
 	</properties>
 
-    <announcement text="Goldenrod Charactersheet - Extension v1.0\rAD&#38;D Core version for Fantasy Grounds\r--by Celestian 2018" font="emotefont" />
+    <announcement text="Goldenrod Charactersheet - Extension v1.2\rAD&#38;D Core version for Fantasy Grounds\r--by Celestian 2018-2019" font="emotefont" />
 	<base>		
         <includefile source="campaign/template_char_adnd_goldenrod.xml" />
         <includefile source="graphics/graphics_goldenrod.xml" />
